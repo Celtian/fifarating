@@ -33,20 +33,11 @@ yarn add fifarating
 _Type this into your ts file._
 
 ```typescript
-import 'fifarating'; // for es5
+import { Fifa, Position, fifaRatingConfig, fifaRatingPositionConfig } from 'fifarating';
 
-// or for es6
-import { registerfifaratingPrototype } from 'fifarating';
+console.log(fifaRatingConfig(Fifa.Fifa12));
 
-registerfifaratingPrototype();
-
-// usage
-
-console.log(new Date('1970-01-01').tofifarating()); // 141428
-console.log(new Date('1970-01-01').addYear(1));
-console.log(new Date('1970-01-01').age());
-console.log(new Date('1970-01-01T03:00:00.000Z').normalize());
-console.log(Date.fromfifarating(141428)); // 1970-01-01
+console.log(fifaRatingPositionConfig(Fifa.Fifa12, Position.GK));
 ```
 
 ## License
