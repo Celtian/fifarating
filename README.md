@@ -40,6 +40,10 @@ console.log(fifaRatingConfig(Fifa.Fifa12));
 console.log(fifaRatingPositionConfig(Fifa.Fifa12, Position.GK));
 ```
 
+## Supported versions of Fifa Soccer
+
+**Fifa 12 - Fifa 16**
+
 ## License
 
 Copyright &copy; 2023 [Dominik Hladik](https://github.com/Celtian)

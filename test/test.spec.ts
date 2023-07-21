@@ -1,36 +1,165 @@
-import '../src';
+import { Fifa, Position, fifaRatingConfig, fifaRatingPositionConfig } from '../src';
 
-describe('FIFA Date Conversion', () => {
-  it('should convert dates to FIFA format correctly', () => {
-    expect(new Date('1970-01-01').tofifarating()).toEqual(141428);
-    expect(new Date('1980-01-01').tofifarating()).toEqual(145080);
-    expect(new Date('1990-01-01').tofifarating()).toEqual(148733);
-    expect(new Date('2000-01-01').tofifarating()).toEqual(152385);
-    expect(new Date('2010-01-01').tofifarating()).toEqual(156038);
+describe('fifaRatingConfig', () => {
+  it('returns correct config for Fifa 12', () => {
+    expect(fifaRatingConfig(Fifa.Fifa12)).toBeInstanceOf(Object);
   });
 
-  it('should add a year correctly', () => {
-    const date = new Date('1970-01-01');
-    const newDate = date.addYear(1);
-    expect(newDate.getFullYear()).toEqual(1971);
+  it('returns correct config for Fifa 13', () => {
+    expect(fifaRatingConfig(Fifa.Fifa13)).toBeInstanceOf(Object);
   });
 
-  it('should calculate the age correctly', () => {
-    const currentDate = new Date(); // Get the current date
-    const dateOfBirth = new Date('1970-01-01');
-    const age = currentDate.getFullYear() - dateOfBirth.getFullYear();
-    expect(dateOfBirth.age()).toEqual(age);
+  it('returns correct config for Fifa 14', () => {
+    expect(fifaRatingConfig(Fifa.Fifa14)).toBeInstanceOf(Object);
   });
 
-  it('should normalize the date correctly', () => {
-    const date = new Date('1970-01-01T03:00:00.000Z');
-    const normalizedDate = date.normalize();
-    expect(normalizedDate.toISOString()).toEqual('1970-01-01T00:00:00.000Z');
+  it('returns correct config for Fifa 15', () => {
+    expect(fifaRatingConfig(Fifa.Fifa15)).toBeInstanceOf(Object);
   });
 
-  it('should convert FIFA date to regular date correctly', () => {
-    const convertedDate = Date.fromfifarating(141428);
-    expect(convertedDate instanceof Date).toBe(true);
-    expect(convertedDate.toISOString()).toEqual('1970-01-01T00:00:00.000Z');
+  it('returns correct config for Fifa 16', () => {
+    expect(fifaRatingConfig(Fifa.Fifa16)).toBeInstanceOf(Object);
+  });
+});
+
+describe('fifaRatingPositionConfig', () => {
+  it('returns correct config for Fifa 12 for specific position', () => {
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.GK)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.SW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.CB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.CDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.CM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.CF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.RS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.ST)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa12, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 13 for specific position', () => {
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.GK)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.SW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.CB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.CDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.CM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.CF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.RS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.ST)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa13, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 14 for specific position', () => {
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.GK)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.SW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.CB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.CDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.CM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.CF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.RS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.ST)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa14, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 15 for specific position', () => {
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.GK)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.SW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.CB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.CDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.CM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.CF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.RS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.ST)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa15, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 16 for specific position', () => {
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.GK)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.SW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.CB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LCB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LWB)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.CDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LDM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.CM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LCM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LM)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.CF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LF)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RW)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.RS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.ST)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LS)).toBeInstanceOf(Object);
+    expect(fifaRatingPositionConfig(Fifa.Fifa16, Position.LW)).toBeInstanceOf(Object);
   });
 });

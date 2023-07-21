@@ -3,7 +3,6 @@ import { fifa12, fifa13, fifa14, fifa15, fifa16 } from './config';
 export enum Position {
   GK = 'GK', // Goalkeeper
   SW = 'SW', // Sweeper
-
   RWB = 'RWB', // Right Wing Back
   RB = 'RB', // Right Back
   RCB = 'RCB', // Right Centre Back
@@ -11,25 +10,20 @@ export enum Position {
   LCB = 'LCB', // Left Centre back
   LB = 'LB', // Left Back
   LWB = 'LWB', // Left Wing Back
-
   RDM = 'RDM', // Right Defensive Midfielder
   CDM = 'CDM', // Central Defensive Midfielder
   LDM = 'LDM', // Left Defensive Midfielder
-
   RM = 'RM', // Right Midfielder
   RCM = 'RCM', // Right Central Midfielder
   CM = 'CM', // Central Midfielder
   LCM = 'LCM', // Left Central Midfielder
   LM = 'LM', // Left Midfielder
-
   RAM = 'RAM', // Right Attacking Midfielder
   CAM = 'CAM', // Central Attacking Midfielder
   LAM = 'LAM', // Left Attacking Midfielder
-
   RF = 'RF', // Right Forward
   CF = 'CF', // Center Forward
   LF = 'LF', // Left Forward
-
   RW = 'RW', // Right Winger
   RS = 'RS', // Right Striker
   ST = 'ST', // Striker
