@@ -3,6 +3,8 @@ import {
   Fifa,
   FifaRatingAttributes,
   Position,
+  calculateDisplayOverall,
+  calculateRawOverall,
   fifaRatingAttributes,
   fifaRatingConfig,
   fifaRatingPositionConfig
@@ -256,5 +258,121 @@ describe('fifaRatingAttributes', () => {
     };
     const result = fifaRatingAttributes(customDefaultValue);
     expect(result).toEqual(expectedCustomAttributes);
+  });
+});
+
+describe('calculateRawOverall', () => {
+  it('should return raw overall for GK', () => {
+    expect(calculateRawOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK)).toEqual(25);
+    expect(calculateRawOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK)).toEqual(50);
+    expect(calculateRawOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK)).toEqual(75);
+  });
+
+  it('should return raw overall for CB', () => {
+    expect(calculateRawOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB)).toEqual(25);
+    expect(calculateRawOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB)).toEqual(50);
+    expect(calculateRawOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB)).toEqual(75);
+  });
+
+  it('should return raw overall for CM', () => {
+    expect(calculateRawOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM)).toEqual(25);
+    expect(calculateRawOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM)).toEqual(50);
+    expect(calculateRawOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM)).toEqual(75);
+  });
+
+  it('should return raw overall for ST', () => {
+    expect(calculateRawOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST)).toEqual(25);
+    expect(calculateRawOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST)).toEqual(50);
+    expect(calculateRawOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST)).toEqual(75);
+  });
+});
+
+describe('calculateDisplayOverall', () => {
+  it('should return display overall for GK', () => {
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK, 1)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK, 1)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK, 1)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK, 2)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK, 2)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK, 2)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK, 3)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK, 3)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK, 3)).toEqual(76);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK, 4)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK, 4)).toEqual(51);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK, 4)).toEqual(77);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.GK, 5)).toEqual(26);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.GK, 5)).toEqual(52);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.GK, 5)).toEqual(78);
+  });
+
+  it('should return display overall for CB', () => {
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB, 1)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB, 1)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB, 1)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB, 2)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB, 2)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB, 2)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB, 3)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB, 3)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB, 3)).toEqual(76);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB, 4)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB, 4)).toEqual(51);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB, 4)).toEqual(77);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CB, 5)).toEqual(26);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CB, 5)).toEqual(52);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CB, 5)).toEqual(78);
+  });
+
+  it('should return display overall for CM', () => {
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM, 1)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM, 1)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM, 1)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM, 2)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM, 2)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM, 2)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM, 3)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM, 3)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM, 3)).toEqual(76);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM, 4)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM, 4)).toEqual(51);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM, 4)).toEqual(77);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.CM, 5)).toEqual(26);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.CM, 5)).toEqual(52);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.CM, 5)).toEqual(78);
+  });
+
+  it('should return display overall for ST', () => {
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST, 1)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST, 1)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST, 1)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST, 2)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST, 2)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST, 2)).toEqual(75);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST, 3)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST, 3)).toEqual(50);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST, 3)).toEqual(76);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST, 4)).toEqual(25);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST, 4)).toEqual(51);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST, 4)).toEqual(77);
+
+    expect(calculateDisplayOverall(fifaRatingAttributes(25), Fifa.Fifa12, Position.ST, 5)).toEqual(26);
+    expect(calculateDisplayOverall(fifaRatingAttributes(50), Fifa.Fifa12, Position.ST, 5)).toEqual(52);
+    expect(calculateDisplayOverall(fifaRatingAttributes(75), Fifa.Fifa12, Position.ST, 5)).toEqual(78);
   });
 });
