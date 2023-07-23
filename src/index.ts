@@ -39,9 +39,49 @@ export enum Fifa {
   Fifa16 = 'fifa16'
 }
 
-export type RatingPositionConfig = Record<string, number>;
+export enum Attribute {
+  acceleration = 'acceleration',
+  aggression = 'aggression',
+  agility = 'agility',
+  balance = 'balance',
+  ballcontrol = 'ballcontrol',
+  crossing = 'crossing',
+  curve = 'curve',
+  dribbling = 'dribbling',
+  finishing = 'finishing',
+  freekickaccuracy = 'freekickaccuracy',
+  gkdiving = 'gkdiving',
+  gkhandling = 'gkhandling',
+  gkkicking = 'gkkicking',
+  gkkickstyle = 'gkkickstyle',
+  gkpositioning = 'gkpositioning',
+  gkreflexes = 'gkreflexes',
+  gksavetype = 'gksavetype',
+  headingaccuracy = 'headingaccuracy',
+  interceptions = 'interceptions',
+  jumping = 'jumping',
+  longpassing = 'longpassing',
+  longshots = 'longshots',
+  marking = 'marking',
+  penalties = 'penalties',
+  positioning = 'positioning',
+  reactions = 'reactions',
+  shortpassing = 'shortpassing',
+  shotpower = 'shotpower',
+  slidingtackle = 'slidingtackle',
+  sprintspeed = 'sprintspeed',
+  stamina = 'stamina',
+  standingtackle = 'standingtackle',
+  strength = 'strength',
+  vision = 'vision',
+  volleys = 'volleys'
+}
 
-export type FifaRatingConfig = Record<Position, RatingPositionConfig>;
+export type FifaRatingAttributes = Record<Attribute, number>;
+
+export type FifaRatingPositionConfig = Partial<FifaRatingAttributes>;
+
+export type FifaRatingConfig = Record<Position, FifaRatingPositionConfig>;
 
 export const fifaRatingConfig = (fifa: Fifa): FifaRatingConfig => {
   switch (fifa) {
@@ -60,7 +100,7 @@ export const fifaRatingConfig = (fifa: Fifa): FifaRatingConfig => {
   }
 };
 
-export const fifaRatingPositionConfig = (fifa: Fifa, position: Position): RatingPositionConfig => {
+export const fifaRatingPositionConfig = (fifa: Fifa, position: Position): FifaRatingPositionConfig => {
   switch (fifa) {
     case Fifa.Fifa12:
       return fifa12[position];
@@ -76,3 +116,53 @@ export const fifaRatingPositionConfig = (fifa: Fifa, position: Position): Rating
       return undefined;
   }
 };
+
+export const fifaRatingAttributes = (defaultValue: number = 50): FifaRatingAttributes => {
+  return Object.values(Attribute)
+    .map((attr) => ({ [attr]: defaultValue }))
+    .reduce((acc, cur) => {
+      acc = {
+        ...acc,
+        ...cur
+      };
+      return acc;
+    }, {}) as FifaRatingAttributes;
+};
+
+export const calculateRawOverall = (attributes: FifaRatingAttributes, fifa: Fifa, position: Position): number => {
+  const positionConfig = fifaRatingPositionConfig(fifa, position);
+  const rawOverall = Object.entries(positionConfig).reduce((acc, [k, v]) => {
+    const key = k as Attribute;
+    const value = v;
+    return acc + attributes[key] * value;
+  }, 0);
+  return Math.min(Math.round(rawOverall), 99);
+};
+
+// valid for FIFA 12 - 16 (rest should be checked)
+export const calculateDisplayOverall = (attributes: FifaRatingAttributes, fifa: Fifa, position: Position, reputation: number): number => {
+  const rawOverall = calculateRawOverall(attributes, fifa, position);
+  if(reputation === 3) {
+    if(rawOverall > 50) {
+      return Math.min(rawOverall + 1, 99);
+    }
+  } else if(reputation === 4) {
+    if(rawOverall >= 67) {
+      return Math.min(rawOverall + 2, 99);
+    }
+    if(rawOverall >= 33) {
+      return Math.min(rawOverall + 1, 99);
+    }
+  } else if(reputation === 5) {
+    if(rawOverall >= 75) {
+      return Math.min(rawOverall + 3, 99);
+    }
+    if(rawOverall >= 50) {
+      return Math.min(rawOverall + 2, 99);
+    }
+    if(rawOverall >= 25) {
+      return Math.min(rawOverall + 1, 99);
+    }
+  }
+  return rawOverall;
+}
