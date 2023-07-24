@@ -1,4 +1,4 @@
-import { Fifa, Position, calculateDisplayOverall, calculateRawOverall, fifaRatingAttributes, fifaRatingConfig, fifaRatingPositionConfig } from './src';
+import { AttributesUtils, CalculateUtils, ConfigUtils, Fifa, Position } from './src';
 
 const fifaConfigDemo = (): void => {
   console.log('⚽⚽⚽ Fifa rating config demo ⚽⚽⚽');
@@ -7,15 +7,21 @@ const fifaConfigDemo = (): void => {
   const position = Position.GK;
   const defaultOverall = 75;
   const reputation = 5;
-  const attributes = fifaRatingAttributes(defaultOverall);
+  const attributes = AttributesUtils.init(defaultOverall);
 
-  console.log(fifaRatingConfig(fifa));
+  console.log(ConfigUtils.fifa(fifa));
 
-  console.log(fifaRatingPositionConfig(fifa, position));
+  console.log(ConfigUtils.fifaPosition(fifa, position));
 
-  console.log(calculateRawOverall(attributes, fifa, position));
+  console.log(CalculateUtils.rawOverall(attributes, fifa, position));
 
-  console.log(calculateDisplayOverall(attributes, fifa, position, reputation));
+  console.log(CalculateUtils.displayOverall(attributes, fifa, position, reputation));
+
+  console.log(AttributesUtils.init(defaultOverall));
+
+  console.log(AttributesUtils.setRawOverall(AttributesUtils.init(defaultOverall), fifa, position, defaultOverall + 5));
+
+  console.log(AttributesUtils.generateRawOverall(fifa, position, defaultOverall));
 };
 
 fifaConfigDemo();

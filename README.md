@@ -33,15 +33,7 @@ yarn add fifarating
 _Type this into your ts file._
 
 ```typescript
-import {
-  Fifa,
-  Position,
-  calculateDisplayOverall,
-  calculateRawOverall,
-  fifaRatingAttributes,
-  fifaRatingConfig,
-  fifaRatingPositionConfig
-} from 'fifarating';
+import { AttributesUtils, CalculateUtils, ConfigUtils, Fifa, Position } from 'fifarating';
 
 const fifa = Fifa.Fifa12;
 const position = Position.GK;
@@ -49,13 +41,19 @@ const defaultOverall = 75;
 const reputation = 5;
 const attributes = fifaRatingAttributes(defaultOverall);
 
-console.log(fifaRatingConfig(fifa));
+console.log(ConfigUtils.fifa(fifa));
 
-console.log(fifaRatingPositionConfig(fifa, position));
+console.log(ConfigUtils.fifaPosition(fifa, position));
 
-console.log(calculateRawOverall(attributes, fifa, position));
+console.log(CalculateUtils.rawOverall(attributes, fifa, position));
 
-console.log(calculateDisplayOverall(attributes, fifa, position, reputation));
+console.log(CalculateUtils.displayOverall(attributes, fifa, position, reputation));
+
+console.log(AttributesUtils.init(defaultOverall));
+
+console.log(AttributesUtils.setRawOverall(AttributesUtils.init(defaultOverall), fifa, position, defaultOverall + 5));
+
+console.log(AttributesUtils.generateRawOverall(fifa, position, defaultOverall));
 ```
 
 ## Supported versions of Fifa Soccer
