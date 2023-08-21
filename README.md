@@ -39,7 +39,7 @@ const fifa = Fifa.Fifa12;
 const position = Position.GK;
 const defaultOverall = 75;
 const reputation = 5;
-const attributes = fifaRatingAttributes(defaultOverall);
+const attributes = AttributesUtils.init(defaultOverall);
 
 console.log(ConfigUtils.fifa(fifa));
 
