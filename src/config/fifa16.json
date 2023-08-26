@@ -176,18 +176,18 @@
     "vision": 0.07
   },
   "RCM": {
-    "acceleration": 0.04,
-    "agility": 0.03,
-    "ballcontrol": 0.15,
-    "dribbling": 0.13,
-    "finishing": 0.07,
-    "longpassing": 0.04,
-    "longshots": 0.05,
-    "positioning": 0.09,
-    "reactions": 0.07,
-    "shortpassing": 0.16,
-    "sprintspeed": 0.03,
-    "vision": 0.14
+    "ballcontrol": 0.14,
+    "dribbling": 0.07,
+    "finishing": 0.02,
+    "interceptions": 0.05,
+    "longpassing": 0.13,
+    "longshots": 0.04,
+    "positioning": 0.06,
+    "reactions": 0.08,
+    "shortpassing": 0.17,
+    "stamina": 0.06,
+    "standingtackle": 0.05,
+    "vision": 0.13
   },
   "CM": {
     "ballcontrol": 0.14,
