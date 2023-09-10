@@ -58,7 +58,7 @@ console.log(AttributesUtils.generateRawOverall(fifa, position, defaultOverall));
 
 ## Supported versions of Fifa Soccer
 
-**Fifa 12 - Fifa 16**
+**Fifa 12 - Fifa 23**
 
 ## License
 

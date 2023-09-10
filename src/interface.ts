@@ -34,7 +34,14 @@ export enum Fifa {
   Fifa13 = 'fifa13',
   Fifa14 = 'fifa14',
   Fifa15 = 'fifa15',
-  Fifa16 = 'fifa16'
+  Fifa16 = 'fifa16',
+  Fifa17 = 'fifa17',
+  Fifa18 = 'fifa18',
+  Fifa19 = 'fifa19',
+  Fifa20 = 'fifa20',
+  Fifa21 = 'fifa21',
+  Fifa22 = 'fifa22',
+  Fifa23 = 'fifa23'
 }
 
 export enum Attribute {
