@@ -20,6 +20,34 @@ describe('ConfigUtils.fifa', () => {
   it('returns correct config for Fifa 16', () => {
     expect(ConfigUtils.fifa(Fifa.Fifa16)).toBeInstanceOf(Object);
   });
+
+  it('returns correct config for Fifa 17', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa17)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 18', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa18)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 19', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa19)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 20', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa20)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 21', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa21)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 22', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa22)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 23', () => {
+    expect(ConfigUtils.fifa(Fifa.Fifa23)).toBeInstanceOf(Object);
+  });
 });
 
 describe('ConfigUtils.fifaPosition', () => {
@@ -161,5 +189,201 @@ describe('ConfigUtils.fifaPosition', () => {
     expect(ConfigUtils.fifaPosition(Fifa.Fifa16, Position.ST)).toBeInstanceOf(Object);
     expect(ConfigUtils.fifaPosition(Fifa.Fifa16, Position.LS)).toBeInstanceOf(Object);
     expect(ConfigUtils.fifaPosition(Fifa.Fifa16, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 17 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa17, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 18 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa18, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 19 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa19, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 20 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa20, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 21 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa21, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 22 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa22, Position.LW)).toBeInstanceOf(Object);
+  });
+
+  it('returns correct config for Fifa 23 for specific position', () => {
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.GK)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.SW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.CB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LCB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LWB)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.CDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LDM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.CM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LCM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LM)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.CF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LF)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RW)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.RS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.ST)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LS)).toBeInstanceOf(Object);
+    expect(ConfigUtils.fifaPosition(Fifa.Fifa23, Position.LW)).toBeInstanceOf(Object);
   });
 });
