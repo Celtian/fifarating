@@ -14,7 +14,7 @@
 
 > Utils for Fifa Soccer Game dates
 
-## Install
+## 🛠️ Install
 
 _Nodejs 12 or higher need to be installed first_
 
@@ -28,7 +28,7 @@ or
 yarn add fifarating
 ```
 
-## Quick start
+## 🚀 Quick start
 
 _Type this into your ts file._
 
@@ -60,9 +60,9 @@ console.log(AttributesUtils.generateRawOverall(fifa, position, defaultOverall));
 
 **Fifa 12 - Fifa 23**
 
-## License
+## 🪪 License
 
-Copyright &copy; 2023 [Dominik Hladik](https://github.com/Celtian)
+Copyright &copy; 2023 - 2024 [Dominik Hladik](https://github.com/Celtian)
 
 All contents are licensed under the [MIT license].
 
