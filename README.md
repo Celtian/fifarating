@@ -25,7 +25,7 @@ npm install fifarating
 or
 
 ```terminal
-yarn add fifarating
+bun add fifarating
 ```
 
 ## 🚀 Quick start
